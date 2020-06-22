@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SolutionFile>
+		<Header>
+			<Date>2020-06-22</Date>
+			<Time>16:08:53.2472348+08:00</Time>
+			<Version>1</Version>
+			<Type>Solution</Type>
+			<ID>cf4f1307-fcdf-4e96-a03b-daa8bf3cd769</ID>
+		</Header>
+		<Solution_Data>
+			<Files>
+				<Name />
+				<Content />
+			</Files>
+		</Solution_Data>
+		<UI_State />
+		<Attributes />
+	</SolutionFile>
+</GestureBuilderFile>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ProjectFile>
+		<Header>
+			<Date>2020-06-22</Date>
+			<Time>14:59:26.4805111+08:00</Time>
+			<Version>5</Version>
+			<Type>AdaBoostTrigger</Type>
+			<Function>
+				<Type>Analysis</Type>
+				<ProjectAttribute Name="HandClap" Type="BOOL" />
+				<ProjectAccompanyAttributes>
+					<Items Name="Confidence" Type="FLOAT" />
+					<Items Name="FirstFrameDetected" Type="BOOL" />
+				</ProjectAccompanyAttributes>
+				<DefaultTag xsi:type="BoolAttribute" Name="HandClap" Value="false" />
+			</Function>
+			<ID>57cbbb93-82ba-4bc6-a24f-7b2a96b0a7ed</ID>
+		</Header>
+		<Project_Data>
+			<Files>
+				<Name />
+				<Content>
+					<Items>
+						<File>D:/JMX/Gesture/20200622_064529_00.vgbclip</File>
+					</Items>
+				</Content>
+			</Files>
+		</Project_Data>
+		<UI_State />
+		<Attributes>
+			<Items xsi:type="BoolAttribute" Name="Mirror Left Right" Value="false" />
+		</Attributes>
+	</ProjectFile>
+</GestureBuilderFile>
