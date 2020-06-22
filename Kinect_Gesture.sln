@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect_Gesture", "Assembly-CSharp-firstpass.csproj", "{3DA8930F-5569-62CA-F5DB-82FEEC3145DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect_Gesture", "Assembly-CSharp.csproj", "{E4D1955F-5986-43AA-543B-E90A531E21E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect_Gesture", "Assembly-CSharp-Editor-firstpass.csproj", "{7FA0D75A-9D18-0852-0A61-858BE7CCC1B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DA8930F-5569-62CA-F5DB-82FEEC3145DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA8930F-5569-62CA-F5DB-82FEEC3145DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA8930F-5569-62CA-F5DB-82FEEC3145DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA8930F-5569-62CA-F5DB-82FEEC3145DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D1955F-5986-43AA-543B-E90A531E21E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D1955F-5986-43AA-543B-E90A531E21E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D1955F-5986-43AA-543B-E90A531E21E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D1955F-5986-43AA-543B-E90A531E21E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA0D75A-9D18-0852-0A61-858BE7CCC1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA0D75A-9D18-0852-0A61-858BE7CCC1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA0D75A-9D18-0852-0A61-858BE7CCC1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA0D75A-9D18-0852-0A61-858BE7CCC1B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
