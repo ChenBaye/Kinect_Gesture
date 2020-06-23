@@ -29,7 +29,11 @@ public class PatientGestureListener : MonoBehaviour, KinectGestures.GestureListe
 		manager.DetectGesture(userId, KinectGestures.Gestures.Sit);
 		manager.DetectGesture(userId, KinectGestures.Gestures.Stand);
 		manager.DetectGesture(userId, KinectGestures.Gestures.Surrender);
+		manager.DetectGesture(userId, KinectGestures.Gestures.ArmExtend);
+		manager.DetectGesture(userId, KinectGestures.Gestures.FeetTogether);
 		manager.DetectGesture(userId, KinectGestures.Gestures.Bobath);
+		manager.DetectGesture(userId, KinectGestures.Gestures.LeftLegStand);
+		manager.DetectGesture(userId, KinectGestures.Gestures.RightLegStand);
 		//manager.DetectGesture(userId, KinectGestures.Gestures.Sit2Stand);
 
 		if (gestureInfo != null)
@@ -122,6 +126,7 @@ public class PatientGestureListener : MonoBehaviour, KinectGestures.GestureListe
 			sGestureText = "Stand2Sit detected";
 			Debug.Log("Stand2Sit Gesture");
 		}
+
 
 		// 重置上一个姿势
 		LastGesture = gesture;

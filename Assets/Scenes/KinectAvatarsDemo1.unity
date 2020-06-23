@@ -200,7 +200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_Name
@@ -431,7 +431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u53EF\u8BC6\u522B\u5750\u3001\u7AD9\u3001\u7531\u5750\u5230\u7AD9\u3001\u7531\u7AD9\u5230\u5750\u3001Bobath\u3001\u6295\u964D"
+  m_Text: "\u59FF\u52BF\u8BC6\u522B"
 --- !u!222 &378432083
 CanvasRenderer:
   m_ObjectHideFlags: 0
