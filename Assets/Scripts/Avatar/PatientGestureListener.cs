@@ -99,6 +99,7 @@ public class PatientGestureListener : MonoBehaviour, KinectGestures.GestureListe
 	public bool GestureCompleted(long userId, int userIndex, KinectGestures.Gestures gesture,
 								  KinectInterop.JointType joint, Vector3 screenPos)
 	{
+
 		if (userIndex != playerIndex)
         {
 			gestureInfo.text = "No Gesture";

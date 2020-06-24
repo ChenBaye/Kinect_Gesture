@@ -222,6 +222,13 @@ public class GestureSourceManager : MonoBehaviour
         this.Result.text = "Detected Gesture " + e.name + " with Confidence " + e.confidence;
     }
 
+
+    /// <summary>
+    /// 由Rank和Confidence判断该动作是否可能被识别
+    /// </summary>
+    /// <param name="Rank"></param>
+    /// <param name="Confidence"></param>
+    /// <returns></returns>
     private bool IsDetected(int Rank, float Confidence)
     {
         switch (Rank)
@@ -237,7 +244,11 @@ public class GestureSourceManager : MonoBehaviour
         }
     }
 
-    //判断当前是哪个姿势
+    /// <summary>
+    /// 从Results中判断当前最符合哪个姿势
+    /// </summary>
+    /// <param name="Results"></param>
+    /// <returns></returns>
     private EventArgs GestureJudgement(List<EventArgs> Results)
     {
         List<EventArgs> Rank2 = new List<EventArgs>();
@@ -279,7 +290,11 @@ public class GestureSourceManager : MonoBehaviour
 
     }
 
-    // select the biggest confidence
+    /// <summary>
+    /// 返回最大confidence对应的元素
+    /// </summary>
+    /// <param name="Rank">输入的EventArgs列表</param>
+    /// <returns></returns>
     private EventArgs SelectGesture(List<EventArgs> Rank)
     {
         if (Rank.Count == 0)
@@ -292,7 +307,10 @@ public class GestureSourceManager : MonoBehaviour
 
 
 
-    // 自定义比较器
+    
+    /// <summary>
+    /// 自定义比较器
+    /// </summary>
     class GestureComparer : IComparer<EventArgs>
     {
         public int Compare(EventArgs x, EventArgs y)
