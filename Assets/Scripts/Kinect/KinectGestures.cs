@@ -148,7 +148,7 @@ public class KinectGestures : MonoBehaviour, GestureManagerInterface
 		Stand,
 		Surrender,
 		ArmExtend,
-		FeetTogether,
+		FeetTogetherStand,
 		Bobath,
 		LeftLegStand,
 		RightLegStand
@@ -1894,7 +1894,7 @@ public class KinectGestures : MonoBehaviour, GestureManagerInterface
 				break;
 
 			//check for FeetTogether
-			case Gestures.FeetTogether:
+			case Gestures.FeetTogetherStand:
 				switch (gestureData.state)
 				{
 					case 0:  // gesture detection	此处用于识别第一阶段姿势，当符合第一阶段姿势时才能继续第二阶段姿势的判断
