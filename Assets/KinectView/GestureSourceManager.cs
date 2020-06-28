@@ -266,7 +266,7 @@ public class GestureSourceManager : MonoBehaviour
                         Rank1.Add(result);
                     break;
                 case 0:
-                        Rank1.Add(result);
+                        Rank0.Add(result);
                     break;
             }
         }
