@@ -97,7 +97,7 @@ public class GestureSourceManager : MonoBehaviour
             if (_Reader != null)
             {
                 _Reader.IsPaused = true;
-                _Reader.FrameArrived += GestureFrameArrived;    //此处为逐帧调用可能卡
+               // _Reader.FrameArrived += GestureFrameArrived;    //此处为逐帧调用可能卡
             }
 
             // load the 'Seated' gesture from the gesture database
@@ -142,6 +142,8 @@ public class GestureSourceManager : MonoBehaviour
         {
             FindValidBody();
         }
+
+        UpdateGestureData();
     }
 
     // Check Body Manager, grab first valid body
@@ -216,6 +218,58 @@ public class GestureSourceManager : MonoBehaviour
             //OnGesture(new EventArgs("NO-Gesture", 0));
         }
     }
+
+    /// <summary>
+    /// 封装调用
+    /// </summary>
+    public void UpdateGestureData()
+    {
+        using (var frame = this._Reader.CalculateAndAcquireLatestFrame())//计算并生成最新的VGB帧
+        {
+            if (frame != null)
+            {
+                var discreteResults = frame.DiscreteGestureResults;
+                var continuousResults = frame.ContinuousGestureResults;
+
+                if (discreteResults != null)
+                {
+                    List<EventArgs> Results = new List<EventArgs>();
+
+                    foreach (var gesture in this._Source.Gestures)
+                    {
+                        if (gesture.GestureType == GestureType.Discrete)
+                        {
+                            DiscreteGestureResult result = null;
+                            discreteResults.TryGetValue(gesture, out result);
+
+                            if (result != null)
+                            {
+                                if (IsDetected(Priority[gesture.Name], result.Confidence))    //该动作是否完成
+                                {
+                                    Results.Add(new EventArgs(gesture.Name, result.Confidence));    //完成则加入判断列表
+
+                                    //Debug.Log("Detected Gesture " + gesture.Name + " with Confidence " + result.Confidence);
+                                    // Fire Event
+                                    //OnGesture(new EventArgs(gesture.Name, result.Confidence));
+                                    //return;
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    EventArgs Result = GestureJudgement(Results);
+                    Debug.Log("Detected Gesture " + Result.name + " with Confidence " + Result.confidence.ToString());
+                    OnGesture(Result);
+                }
+            }
+        }
+    }
+
+
+
+
 
     private void ShowInText(EventArgs e)
     {
